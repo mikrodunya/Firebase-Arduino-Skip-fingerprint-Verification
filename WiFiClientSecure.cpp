@@ -1,4 +1,5 @@
 /*
+  08.09.2017 Maytere
   WiFiClientSecure.cpp - Variant of WiFiClient with TLS support
   Copyright (c) 2015 Ivan Grokhotkov. All rights reserved.
   This file is part of the esp8266 core for Arduino environment.
