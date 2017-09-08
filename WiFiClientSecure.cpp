@@ -45,6 +45,8 @@ extern "C"
 #define SSL_DEBUG_OPTS 0
 #endif
 
+#define SKIP_FP_CONTROL
+
 class SSLContext
 {
 public:
@@ -482,6 +484,10 @@ static bool matchName(const String& name, const String& domainName)
 
 bool WiFiClientSecure::verify(const char* fp, const char* domain_name)
 {
+  #ifdef SKIP_FP_CONTROL
+      return true;
+  #endif
+
     if (!_ssl) {
         return false;
     }
